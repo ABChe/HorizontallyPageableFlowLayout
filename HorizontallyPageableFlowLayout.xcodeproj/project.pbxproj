@@ -13,6 +13,9 @@
 		F250FA94200E245C0078C22C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F250FA93200E245C0078C22C /* Assets.xcassets */; };
 		F250FA97200E245C0078C22C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F250FA95200E245C0078C22C /* LaunchScreen.storyboard */; };
 		F250FA9A200E245C0078C22C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F250FA99200E245C0078C22C /* main.m */; };
+		F250FAA8200E25430078C22C /* CollectionViewLabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F250FAA6200E25430078C22C /* CollectionViewLabelCell.m */; };
+		F250FAA9200E25430078C22C /* CollectionViewLabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F250FAA7200E25430078C22C /* CollectionViewLabelCell.xib */; };
+		F250FAAD200E26410078C22C /* HorizontallyPageableFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F250FAAC200E26410078C22C /* HorizontallyPageableFlowLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,11 @@
 		F250FA96200E245C0078C22C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F250FA98200E245C0078C22C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F250FA99200E245C0078C22C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F250FAA5200E25430078C22C /* CollectionViewLabelCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewLabelCell.h; sourceTree = "<group>"; };
+		F250FAA6200E25430078C22C /* CollectionViewLabelCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewLabelCell.m; sourceTree = "<group>"; };
+		F250FAA7200E25430078C22C /* CollectionViewLabelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewLabelCell.xib; sourceTree = "<group>"; };
+		F250FAAB200E26410078C22C /* HorizontallyPageableFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HorizontallyPageableFlowLayout.h; sourceTree = "<group>"; };
+		F250FAAC200E26410078C22C /* HorizontallyPageableFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HorizontallyPageableFlowLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,13 +68,26 @@
 			children = (
 				F250FA8A200E245C0078C22C /* AppDelegate.h */,
 				F250FA8B200E245C0078C22C /* AppDelegate.m */,
+				F250FAAA200E26200078C22C /* HorizontallyPageableFlowLayout */,
 				F250FA8D200E245C0078C22C /* ViewController.h */,
 				F250FA8E200E245C0078C22C /* ViewController.m */,
+				F250FAA5200E25430078C22C /* CollectionViewLabelCell.h */,
+				F250FAA6200E25430078C22C /* CollectionViewLabelCell.m */,
+				F250FAA7200E25430078C22C /* CollectionViewLabelCell.xib */,
 				F250FA90200E245C0078C22C /* Main.storyboard */,
 				F250FA93200E245C0078C22C /* Assets.xcassets */,
 				F250FA95200E245C0078C22C /* LaunchScreen.storyboard */,
 				F250FA98200E245C0078C22C /* Info.plist */,
 				F250FA99200E245C0078C22C /* main.m */,
+			);
+			path = HorizontallyPageableFlowLayout;
+			sourceTree = "<group>";
+		};
+		F250FAAA200E26200078C22C /* HorizontallyPageableFlowLayout */ = {
+			isa = PBXGroup;
+			children = (
+				F250FAAB200E26410078C22C /* HorizontallyPageableFlowLayout.h */,
+				F250FAAC200E26410078C22C /* HorizontallyPageableFlowLayout.m */,
 			);
 			path = HorizontallyPageableFlowLayout;
 			sourceTree = "<group>";
@@ -132,6 +153,7 @@
 				F250FA97200E245C0078C22C /* LaunchScreen.storyboard in Resources */,
 				F250FA94200E245C0078C22C /* Assets.xcassets in Resources */,
 				F250FA92200E245C0078C22C /* Main.storyboard in Resources */,
+				F250FAA9200E25430078C22C /* CollectionViewLabelCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +166,8 @@
 			files = (
 				F250FA8F200E245C0078C22C /* ViewController.m in Sources */,
 				F250FA9A200E245C0078C22C /* main.m in Sources */,
+				F250FAA8200E25430078C22C /* CollectionViewLabelCell.m in Sources */,
+				F250FAAD200E26410078C22C /* HorizontallyPageableFlowLayout.m in Sources */,
 				F250FA8C200E245C0078C22C /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
