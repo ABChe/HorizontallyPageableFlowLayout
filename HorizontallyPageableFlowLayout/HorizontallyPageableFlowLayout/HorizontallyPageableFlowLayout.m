@@ -10,6 +10,9 @@
 
 @interface HorizontallyPageableFlowLayout ()
 
+//
+@property (nonatomic, strong) NSMutableArray<UICollectionViewLayoutAttributes *> *attributesArray;
+
 // 行数
 @property (nonatomic, assign) NSInteger rowCount;
 // item每行个数
@@ -18,8 +21,6 @@
 @property (nonatomic, assign) NSInteger itemCountTotal;
 // 页数
 @property (nonatomic, assign) NSInteger pageCount;
-//
-@property (strong, nonatomic) NSMutableArray<UICollectionViewLayoutAttributes *> *attributesArray;
 // 最大行数
 @property (nonatomic, assign) NSInteger maxRowCount;
 
@@ -63,7 +64,7 @@
 
 - (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath {
     NSInteger item = indexPath.item;
-    
+
     /*
      0 2 4 ---\  0 1 2
      1 3 5 ---/  3 4 5 计算转换后对应的item  原来'4'的item为4,转换后为3
@@ -75,16 +76,21 @@
     // 根据偏移量计算item
     NSInteger newItem = x * self.rowCount + y;
     NSIndexPath *newIndexPath = [NSIndexPath indexPathForItem:newItem inSection:indexPath.section];
-    
+
     UICollectionViewLayoutAttributes *newAttributes = [super layoutAttributesForItemAtIndexPath:newIndexPath];
     newAttributes.indexPath = indexPath;
-    
+
     return newAttributes;
+}
+
+- (CGSize)collectionViewContentSize {
+    if (!self.itemCountTotal) return CGSizeMake(0, 0);
+    
+    return CGSizeMake(self.pageCount * CGRectGetWidth(self.collectionView.frame), 0);
 }
 
 - (NSArray<UICollectionViewLayoutAttributes *> *)layoutAttributesForElementsInRect:(CGRect)rect {
     NSArray *attributes = [super layoutAttributesForElementsInRect:rect];
-    
     NSMutableArray *array = [NSMutableArray array];
     
     for (UICollectionViewLayoutAttributes *attr1 in attributes) {
@@ -98,9 +104,4 @@
     return array;
 }
 
-- (CGSize)collectionViewContentSize {
-    if (!self.itemCountTotal) return CGSizeMake(0, 0);
-    
-    return CGSizeMake(self.pageCount * CGRectGetWidth(self.collectionView.frame), 0);
-}
 @end

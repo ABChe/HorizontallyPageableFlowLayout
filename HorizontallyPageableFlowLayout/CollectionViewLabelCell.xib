@@ -19,10 +19,11 @@
                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9s-6V-1oE">
-                        <rect key="frame" x="4" y="15" width="42" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9s-6V-1oE">
+                        <rect key="frame" x="5" y="5" width="40" height="40"/>
+                        <color key="backgroundColor" red="0.2463500805425366" green="1" blue="0.28221554748300337" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
@@ -30,6 +31,10 @@
             <constraints>
                 <constraint firstItem="g9s-6V-1oE" firstAttribute="centerX" secondItem="SEy-5g-ep8" secondAttribute="centerX" id="CnO-vu-Aon"/>
                 <constraint firstItem="g9s-6V-1oE" firstAttribute="centerY" secondItem="SEy-5g-ep8" secondAttribute="centerY" id="JIb-BG-RlJ"/>
+                <constraint firstAttribute="trailing" secondItem="g9s-6V-1oE" secondAttribute="trailing" constant="5" id="Ks2-iU-nv1"/>
+                <constraint firstItem="g9s-6V-1oE" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="s33-6X-I9c"/>
+                <constraint firstItem="g9s-6V-1oE" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="sGz-bJ-nVz"/>
+                <constraint firstAttribute="bottom" secondItem="g9s-6V-1oE" secondAttribute="bottom" constant="5" id="yOR-gD-MVc"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
             <connections>

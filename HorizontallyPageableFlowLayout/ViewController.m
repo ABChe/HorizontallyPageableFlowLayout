@@ -22,10 +22,10 @@
 @property (nonatomic, strong) NSMutableArray *dataArray;
 @property (nonatomic, strong) HorizontallyPageableFlowLayout *layout;
 
-
 @end
 
 @implementation ViewController
+
 
 #pragma mark - LifeCycle
 
@@ -164,7 +164,7 @@
 - (NSMutableArray *)dataArray {
     if (_dataArray == nil) {
         _dataArray = [NSMutableArray array];
-        for (int i = 0; i < 1; i++) {
+        for (int i = 0; i < 10; i++) {
             [_dataArray addObject:[NSString stringWithFormat:@"%d",i]];
         }
     }
