@@ -10,8 +10,6 @@
 #import "HorizontallyPageableFlowLayout.h"
 #import "CollectionViewLabelCell.h"
 
-#define kMaxRowCount         2.f
-#define kItemCountPerRow     4.f
 static const CGFloat kMaxRowCount = 2.f;
 static const CGFloat kItemCountPerRow = 4.f;
 
