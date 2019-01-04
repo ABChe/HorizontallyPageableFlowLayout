@@ -10,7 +10,7 @@
 
 @interface HorizontallyPageableFlowLayout ()
 
-//
+// 存放全部item布局信息的数组
 @property (nonatomic, strong) NSMutableArray<UICollectionViewLayoutAttributes *> *attributesArray;
 
 // 行数
@@ -53,7 +53,7 @@
         self.rowCount = ceilf(self.itemCountTotal / (float)self.itemCountPerRow);
     }
     
-    self.pageCount = self.itemCountTotal ? ceilf(self.itemCountTotal / (float) (self.itemCountPerRow * self.maxRowCount)) : 0;
+    self.pageCount = self.itemCountTotal ? ceilf(self.itemCountTotal / (float)(self.itemCountPerRow * self.maxRowCount)) : 0;
     
     for (NSInteger i = 0; i < self.itemCountTotal; i++) {
         NSIndexPath *indexPath = [NSIndexPath indexPathForItem:i inSection:0];

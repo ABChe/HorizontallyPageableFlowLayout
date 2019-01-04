@@ -12,20 +12,22 @@
 
 #define kMaxRowCount         2.f
 #define kItemCountPerRow     4.f
+static const CGFloat kMaxRowCount = 2.f;
+static const CGFloat kItemCountPerRow = 4.f;
 
 @interface ViewController ()<UICollectionViewDelegate, UICollectionViewDataSource>
 
-@property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) UIButton *addButton;
 @property (nonatomic, strong) UIButton *deleteButton;
+@property (nonatomic, strong) UICollectionView *collectionView;
 
 @property (nonatomic, strong) NSMutableArray *dataArray;
 @property (nonatomic, strong) HorizontallyPageableFlowLayout *layout;
 
 @end
 
-@implementation ViewController
 
+@implementation ViewController
 
 #pragma mark - LifeCycle
 
@@ -47,6 +49,7 @@
     if (self.dataArray.count == 0) {
         itemCount = 0;
     } else if (self.dataArray.count / (kMaxRowCount * kItemCountPerRow) > 1) {
+        // 超过一页
         itemCount = kMaxRowCount * kItemCountPerRow * ceilf(self.dataArray.count / (kMaxRowCount * kItemCountPerRow));
     } else {
         itemCount = ceilf(self.dataArray.count / kItemCountPerRow) * kItemCountPerRow;
